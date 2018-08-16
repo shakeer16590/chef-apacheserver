@@ -3,8 +3,8 @@ package 'httpd' do
 	action :install
 end
 file '/var/www/html/index.html' do
-	content 'Hello, World! \n'
+	content '<h1>Hello, World! </h1>'
 end
 service 'httpd' do
-	action [ :start, :enable ]
+	action [ :restart, :enable ]
 end
